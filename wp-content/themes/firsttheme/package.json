@@ -38,8 +38,10 @@
     "yargs": "^14.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "babel-register": "^6.26.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
   },
   "optionalDependencies": {}
 }

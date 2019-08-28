@@ -15,7 +15,7 @@ function _themename_post_meta(){
 }
 
 function _themename_readmore_link(){
-    echo   '<a href="' . esc_url(get_the_permalink()) . '" title="' .               the_title_attribute(['echo' => false]) . '">';
+    echo   '<a class="c-post__readmore" href="' . esc_url(get_the_permalink()) . '" title="' .               the_title_attribute(['echo' => false]) . '">';
     printf(
         wp_kses(
             __( 'Read More <span class="u-screen-reader-text">About %s</span>', '_themename'),
