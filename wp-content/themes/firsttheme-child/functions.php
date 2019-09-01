@@ -34,4 +34,4 @@ add_filter('_themename_no_posts_text', 'no_posts_text');
 function filter_title($title){
     return 'Filter ' . $title;
 }
-add_filter('the_title', 'filter_title');
+//add_filter('the_title', 'filter_title');
