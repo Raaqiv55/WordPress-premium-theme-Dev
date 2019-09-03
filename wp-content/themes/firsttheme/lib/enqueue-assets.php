@@ -15,3 +15,9 @@
     }
 
 add_action('admin_enqueue_scripts', '_themename_admin_assets');  
+
+function _themename_customize_preview_js(){
+    wp_enqueue_script('_themename-customize-preview', get_template_directory_uri() . '/dist/assets/js/customize-preview.js', array('customize-preview', 'jquery'), '1.0.0', true);
+}
+
+add_action('customize_preview_init', '_themename_customize_preview_js');
