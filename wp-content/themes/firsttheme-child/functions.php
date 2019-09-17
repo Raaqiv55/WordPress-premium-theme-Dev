@@ -13,7 +13,7 @@ function firsttheme_child_scripts(){
 }
 
 function after_pagination(){
-    echo "sooe";
+    //echo "sooe";
 }
 add_action('_themename_after_pagination', 'after_pagination');
 
