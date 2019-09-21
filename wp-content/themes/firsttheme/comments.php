@@ -22,15 +22,17 @@ if(post_password_required()){
         <ul class="c-comments__list">
             <?php 
                 wp_list_comments(array(
-                    'avatar_size' => 200,
-                    'reply_text' => 'hello'
+                    'short_ping' => false,
+                    'avatar_size' => 50,
+                    'reply_text' => 'hello',
+                    'callback' => '_themename_comment_callback'
                 ));
             ?>
         </ul>
         <?php the_comments_pagination(); ?>
     <?php } ?>
     <?php
-        if(!commets_open() && get_comments_number()){ ?>
+        if(!comments_open() && get_comments_number()){ ?>
         <p class="c-comments__closed"><?php esc_html_e('Comments are closed for this post', '_themename'); ?></p>
     <?php } ?>
     <?php comment_form(); ?>    
