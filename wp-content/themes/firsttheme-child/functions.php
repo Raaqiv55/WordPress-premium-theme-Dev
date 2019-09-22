@@ -1,8 +1,8 @@
 <?php 
 
-function _themename_post_meta(){
-    echo 'Some os';
-}
+// function _themename_post_meta(){
+//     echo 'Some os';
+// }
 
 add_action('wp_enqueue_scripts', 'firsttheme_child_scripts');
 
