@@ -31,7 +31,7 @@
                     <a class="c-post-navigation__link" href="<?php the_permalink($next->ID); ?>">
                         <?php if(has_post_thumbnail($next->ID)){?>
                             <div class="c-post-navigation__thumbnail">
-                                <?php echo get_the_post_thumbnail($next-ID, 'thumbnail'); ?>
+                                <?php echo get_the_post_thumbnail($next->ID, 'thumbnail'); ?>
                             </div>
                         <?php } ?>
                         <div class="c-post-navigation__content">
