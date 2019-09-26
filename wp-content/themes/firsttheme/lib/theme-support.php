@@ -23,6 +23,7 @@ function _themename_theme_support(){
         'audio'
     ));
     add_theme_support('align-wide');
+    add_image_size('_themename-blog-image', 1200, 500, true);
 }
 
 add_action('after_setup_theme', '_themename_theme_support');

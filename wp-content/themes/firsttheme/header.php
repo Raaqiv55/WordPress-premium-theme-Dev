@@ -34,4 +34,6 @@
     </header>
 
     <div id="content">
+        <?php 
+        var_dump(wp_get_attachment_image(1903, '_themename-blog-image'));
        
