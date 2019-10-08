@@ -2,7 +2,7 @@
     <div class="c-post__inner">
         <?php if(get_the_post_thumbnail() !== ''){?>
             <div class="c-post__thumbnail">
-                <?php the_post_thumbnail('large'); ?>
+                <?php the_post_thumbnail('_themename-blog-image'); ?>
             </div>
         <?php } ?>   
 

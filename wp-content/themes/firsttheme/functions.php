@@ -10,6 +10,25 @@ require_once('lib/include-plugins.php');
 require_once('lib/comment_callback.php');
 //require_once('lib/metaboxes.php');
 
+if(!isset($content_width)){
+    $content_width = 800;
+}
+
+function _themename_content_width(){
+    global $content_width;
+    global $post;
+
+    if(is_single() && $post->post_type === 'post'){
+        $layout = _themename_meta($post->ID, '_themename_post_layout', 'full');
+        $sidebar = is_active_sidebar('primary-sidebar');
+        if($layout === 'sidebar' && !$sidebar){
+            $layout = 'full';
+        }
+        $content_width = $layout === 'full' ? 800 : 730;
+    }
+}
+add_action('template_redirect', '_themename_content_width');
+
 function _themename_handle_delete_post(){
     if(isset($_GET['action']) && $_GET['action'] === '_themename_delete_post'){
         if(!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], '_themename_delete_post_' . $_GET['post'])){
