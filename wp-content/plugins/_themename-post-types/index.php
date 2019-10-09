@@ -1,0 +1,20 @@
+<?php 
+/*
+Plugin Name:    _themename _pluginname
+Plugin URI: 
+Description:    Adding Custom Post Types for _themename
+Version:        1.0.0
+Author:         Alamgir
+Author:         alamgir.online
+License:        GPL2
+License URI:    someurl.com
+Text Domain:    _themename-_pluginname
+Domain Path:    /language
+*/
+if(!defined('WPINC')){
+    die;
+}
+
+include_once('includes/porfolio-post-type.php');
+include_once('includes/project-type-tax.php');
+include_once('includes/skills-tax.php');

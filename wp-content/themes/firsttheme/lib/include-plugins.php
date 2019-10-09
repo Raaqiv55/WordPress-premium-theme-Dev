@@ -9,7 +9,16 @@ function get_register_required_plugins(){
         array(
             'name' => '_themename metaboxes',
             'slug' => '_themename-metaboxes',
-            'source' => get_template_directory_uri() . '/lib/plugins/_themenaem-metaboxes.zip',
+            'source' => get_template_directory_uri() . '/lib/plugins/_themename-metaboxes.zip',
+            'required' => true,
+            'version' => '1.0.0',
+            'force_activation' => false,
+            'force_deactivation' => false
+        ),
+        array(
+            'name' => '_themename post types',
+            'slug' => '_themename-post-types',
+            'source' => get_template_directory_uri() . '/lib/plugins/_themename-post-types.zip',
             'required' => true,
             'version' => '1.0.0',
             'force_activation' => false,
