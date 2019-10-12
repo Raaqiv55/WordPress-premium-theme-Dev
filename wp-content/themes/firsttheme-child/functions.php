@@ -4,6 +4,12 @@
 //     echo 'Some os';
 // }
 
+function _childtheme_load_textdomain(){
+    load_theme_textdomain('mytheme-child', get_stylesheet_directory_uri() . '/languages');
+}
+
+add_action('after_setup_theme', '_childtheme_load_textdomain');
+
 add_action('wp_enqueue_scripts', 'firsttheme_child_scripts');
 
 function firsttheme_child_scripts(){
@@ -26,7 +32,7 @@ function function_to_add($query){
 }
 
 function no_posts_text($text){
-    return esc_html__('No Posts', 'show-child');
+    return esc_html__('No Posts', 'mytheme-child');
 }
 
 add_filter('_themename_no_posts_text', 'no_posts_text');
